@@ -15,6 +15,6 @@ import lombok.NoArgsConstructor;
 public class Authority {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String authority;
 }
