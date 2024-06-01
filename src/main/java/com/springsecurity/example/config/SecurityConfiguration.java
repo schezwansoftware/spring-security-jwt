@@ -15,6 +15,7 @@ public class SecurityConfiguration {
                 .csrf().disable()
                 .authorizeHttpRequests(request -> request
                         .requestMatchers("/api/welcome/open").permitAll()
+                        .requestMatchers("/api/users/register").permitAll()
                         .anyRequest().authenticated()
                 ).formLogin(Customizer.withDefaults());
         return http.build();
