@@ -4,7 +4,6 @@ import com.springsecurity.example.entity.Authority;
 import com.springsecurity.example.entity.User;
 import com.springsecurity.example.repository.UserRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

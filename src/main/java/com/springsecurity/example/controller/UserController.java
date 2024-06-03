@@ -2,10 +2,9 @@ package com.springsecurity.example.controller;
 
 import com.springsecurity.example.entity.User;
 import com.springsecurity.example.service.UserService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -20,5 +19,10 @@ public class UserController {
     @PostMapping("/users/register")
     public User register(@RequestBody User user) {
         return userService.registerUser(user);
+    }
+
+    @GetMapping("/users")
+    public List<User> getAllUsers() {
+        return userService.findAllUsers();
     }
 }

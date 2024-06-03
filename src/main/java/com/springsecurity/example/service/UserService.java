@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -30,6 +31,10 @@ public class UserService {
         String hashedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(hashedPassword);
         return userRepository.save(user);
+    }
+
+    public List<User> findAllUsers() {
+        return userRepository.findAll();
     }
 
     private Authority getAuthority(String authority) {
